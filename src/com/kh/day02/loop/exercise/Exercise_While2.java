@@ -15,6 +15,7 @@ public class Exercise_While2 {
 			if(i % 2 != 0) {
 				sum += i;
 			}
+			i++;
 		}
 		System.out.println("1 ~ 100 사이의 홀수의 합 : " + sum);
 		
