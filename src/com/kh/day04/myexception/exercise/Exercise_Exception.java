@@ -43,16 +43,19 @@ public class Exercise_Exception {
 		// 사용자가 정수가 아닌 문자를 입력할 때 발생하는 InputMismatchException 예외를
 		// 처리하여 다시 입력받도록 하여라.
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("정수 하나 입력 : ");
-		int num1 = sc.nextInt();
-		System.out.print("정수 하나 더 입력 : ");
-		int num2 = sc.nextInt();
-		System.out.print("정수 하나 더 입력 : ");
-		int num3 = sc.nextInt();
-		int result = num1 + num2 + num3;
-		
-		System.out.printf("3개의 정수의 합은 %d",result);
+		try {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("정수 하나 입력 : ");
+			int num1 = sc.nextInt();
+			System.out.print("정수 하나 더 입력 : ");
+			int num2 = sc.nextInt();
+			System.out.print("정수 하나 더 입력 : ");
+			int num3 = sc.nextInt();
+			int result = num1 + num2 + num3;
+			System.out.printf("3개의 정수의 합은 %d",result);			
+		} catch(InputMismatchException e) {
+			System.out.println("문자를 입력했습니다! 정수를 다시 입력해주세요.");
+		}
 	}
 	
 	
