@@ -6,6 +6,7 @@ import java.util.Scanner;
 import com.kh.day03.array.exercise.Exercise_Array1;
 import com.kh.day03.array.exercise.Exercise_For;
 import com.kh.day03.array.exercise.Exercise_Loop;
+import com.kh.day03.array.exercise.Exercise_Random;
 import com.kh.day03.array.exercise.Exercise_While;
 
 public class Run {
@@ -32,11 +33,14 @@ public class Run {
 //		exWhile.whileExercise2();
 		
 		Exercise_Loop exLoop = new Exercise_Loop();
-		exLoop.exercise1();
+//		exLoop.exercise1();
 //		exLoop.exercise2();
 //		exLoop.exercise3();
 //		exLoop.exercise4();
 //		exLoop.exercise5();
 //		exLoop.exercise6();
+		
+		Exercise_Random exRand = new Exercise_Random();
+//		exRand.exRand1();
 	}
 }

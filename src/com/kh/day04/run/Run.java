@@ -15,6 +15,8 @@ public class Run {
 		
 		Exercise_Exception exException = new Exercise_Exception();
 //		exException.exercise1();
-		exException.exercise2();
+//		exException.exercise2();
+//		exException.exercise3();
+		exException.exercise4();
 	}
 }

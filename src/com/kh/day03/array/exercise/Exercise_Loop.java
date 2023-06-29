@@ -91,9 +91,13 @@ public class Exercise_Loop {
 		// 사용자로부터 입력 받은 숫자의 단을 출력하세요.
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("구구단의 단을 입력하세요 : ");
+		System.out.print("단을 입력하세요 : ");
 		int input = sc.nextInt();
-
+		
+		System.out.println(input + "단");
+		for(int i = 1; i < 10; i++) {
+			System.out.println(input + " * " + i + " = " + input*i);
+		}
 	}
 		
 	public void exercise6() {
@@ -102,9 +106,19 @@ public class Exercise_Loop {
 		//6번  
 		//사용자로부터 입력 받은 숫자의 단부터 9단까지 출력하세요.
 		//단, 9를 초과하는 숫자가 들어오면 “9 이하의 숫자만 입력해주세요”를 출력하세요.
-
-
-	}		
-
-	
+		
+		System.out.print("단을 입력해주세요. : ");
+		int input = sc.nextInt();
+		
+		if(input <= 9) {
+			for(int i = input; i < 10; i++) {
+				System.out.println(i+"단");
+				for(int j = 1; j < 10; j++) {
+					System.out.println(i + " * " + j + " = " + i*j);
+				}
+			}
+		}else {
+			System.out.print("9 이하의 숫자만 입력해주세요");
+		}	
+	}
 }
