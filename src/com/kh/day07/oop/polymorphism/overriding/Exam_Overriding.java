@@ -62,25 +62,13 @@ class SubClass extends SuperClass {
 		// 실행 5번
 		System.out.println("Sub Object");
 	}
+}
 //public class Exercise_Overriding {
 //	public static void main(String [] args) {
 //		SuperClass ex = new SuperClass();
 //		ex.paint();
 //	}
 //}
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
