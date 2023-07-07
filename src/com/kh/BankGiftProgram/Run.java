@@ -16,15 +16,18 @@ public class Run {
 					memFunc.inputInfo();
 					break;
 				case 2 : 
-					memFunc.inquiryInfo();
+					memFunc.searchInfoByName();
 					break;
 				case 3 : 
-					memFunc.CheckGift();
+					memFunc.printInfo();
 					break;
 				case 4 : 
-					memFunc.DeleteInfo();
+					memFunc.CheckGift();
 					break;
 				case 5 : 
+					memFunc.DeleteInfo();
+					break;
+				case 0 : 
 					memFunc.ShowEnd();
 					break finish;
 				default : 
