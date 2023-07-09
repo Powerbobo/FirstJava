@@ -2,7 +2,7 @@ package com.kh.BankGiftProgram;
 
 import java.util.Scanner;
 
-public class Run {
+public class MemberRun {
 	public static void main(String[] args) {
 		int index = 0;
 		MemberFunction memFunc = new MemberFunction();
@@ -22,9 +22,12 @@ public class Run {
 					memFunc.printInfo();
 					break;
 				case 4 : 
-					memFunc.CheckGift();
+					memFunc.modifyInfo();
 					break;
 				case 5 : 
+					memFunc.CheckGift();
+					break;
+				case 6 : 
 					memFunc.DeleteInfo();
 					break;
 				case 0 : 
