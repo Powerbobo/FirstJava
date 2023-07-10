@@ -1,0 +1,4 @@
+console.clear();
+$.cookie('dogid', 'ddd1004', {expireds:7, path:'/'}
+console.log
+exit
