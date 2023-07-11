@@ -117,7 +117,9 @@ public class MusicController {
 				Music mOne = mList.get(min);
 				Music mTwo = mList.get(i);
 				if(mOne.getTitle().compareTo(mTwo.getTitle()) > 0) {
-//					Music temp 
+					Music temp = mOne;
+					mList.set(min, mTwo);
+					mList.set(i, temp);
 				}
 			}
 		}
@@ -197,8 +199,4 @@ public class MusicController {
 			}
 		}
 	}
-	
-	
-	
-	
 }
