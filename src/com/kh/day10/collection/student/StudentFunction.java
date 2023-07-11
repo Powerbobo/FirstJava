@@ -6,14 +6,9 @@ import java.util.Scanner;
 
 public class StudentFunction {
 	
-//	Student [] students;
-//	int index;
-	// 기존 배열 대신 List 사용하기
 	List<Student> stdList;
 	
 	public StudentFunction() {
-//		students = new Student[100];
-//		index = 0;
 		stdList = new ArrayList<Student>();
 	}
 	
@@ -40,8 +35,6 @@ public class StudentFunction {
 		int score2 = sc. nextInt();
 		Student std = new Student(name, score1, score2);
 		stdList.add(std);
-//		students[index] = std;
-//		index++;
 	}
 	
 	public void searchInfoByName() {
@@ -59,19 +52,9 @@ public class StudentFunction {
 	
 	public void printInfo() {
 		System.out.println("학생 정보 전체 출력");
-			// for each문
-			// stdList에 저장되어있는 객체가 student변수에 들어감
 			for(Student student : stdList) {
 				System.out.println(student.toString());
 			}
-			
-//		for(int i = 0; i < stdList.size(); i++) {
-//			System.out.println(students[i].getName() + "/ ");
-//			System.out.println(stdList.get(i).getName() + "/ ");
-			// toString은 원래 출력문은 아니고, 확인용으로 사용한다.
-			// 단순히 출력만 하는거면 toString을 사용하면 편리하게 사용 가능하다.
-//			System.out.println(stdList.get(i).toString());
-//		}
 	}
 	public void checkPass() {
 		System.out.println("====== 재평가 여부 확인 ======");
