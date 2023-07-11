@@ -28,7 +28,7 @@ public class MemberRun {
 					memFunc.CheckGift();
 					break;
 				case 6 : 
-					memFunc.DeleteInfo();
+					memFunc.romoveInfo();
 					break;
 				case 0 : 
 					memFunc.ShowEnd();

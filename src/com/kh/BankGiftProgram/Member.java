@@ -8,11 +8,11 @@ public class Member {
 	private String position;
 	private String phone;
 	private String address;
-	private int money;
+	private long money;
 	
 	// ===========================> 생성자
 	public Member() {}
-	public Member(String name, String company, String position, String phone, String address, int money) {
+	public Member(String name, String company, String position, String phone, String address, long money) {
 		this.name = name;
 		this.company = company;
 		this.position = position;
@@ -44,7 +44,7 @@ public class Member {
 		return this.address;
 	}
 	
-	public int getMoney() {
+	public long getMoney() {
 		return this.money;
 	}
 	
@@ -69,7 +69,7 @@ public class Member {
 		this.address = address;
 	}
 	
-	public void setMoney(int money) {
+	public void setMoney(long money) {
 		this.money = money;
 	}
 }

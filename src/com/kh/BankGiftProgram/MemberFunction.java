@@ -46,7 +46,8 @@ public class MemberFunction {
 		System.out.print("이름 : ");
 		String name = sc.next();
 		System.out.print("회사 : ");
-		String company = sc.next();
+		sc.nextLine();
+		String company = sc.nextLine();
 		System.out.print("직급 : ");
 		String position = sc.next();
 		System.out.print("연락처 : ");
@@ -72,19 +73,21 @@ public class MemberFunction {
 		System.out.print("조회할 고객 : ");
 		String searchName = sc.next();
 		System.out.println();
+		boolean flag = false;
 		for(Member mem : memList) {
 			if(mem.getName().equals(searchName)) {
 				System.out.printf("이름 : %s\n회사 : %s\n직급 : %s\n연락처 : %s\n주소 : %s \n예금 금액 : %s\n"
 						, mem.getName(), mem.getCompany(), mem.getPosition(), mem.getPhone(), mem.getAddress(), mem.getMoney());
 				System.out.println();
 				System.out.println("[서비스 성공] : 조회 성공!");
+				flag = true;
 				break;
-			} else {
-				System.out.println("등록되지 않은 고객님입니다. 고객님의 성함을 정확히 입력해주세요.");
-				System.out.println();
-				System.out.println("[서비스 실패] : 조회 실패!");
-				break;
-			}
+			} 
+		}
+		if(!flag) {
+			System.out.println("등록되지 않은 고객님입니다. 고객님의 성함을 정확히 입력해주세요.");
+			System.out.println();
+			System.out.println("[서비스 실패] : 조회 실패!");
 		}
 		System.out.println();
 	}
@@ -126,12 +129,25 @@ public class MemberFunction {
 		String modAddress = sc.nextLine();
 		System.out.print("수정할 정보 입력(예금 금액) : ");
 		int modMoney = sc.nextInt();
+		// 수정한 정보 저장
 		Member modMember = new Member(modName, modCompany, modPosition, modPhone, modAddress, modMoney);
+		boolean flag = false;
 		for (int i = 0; i < memList.size(); i++) {
-			if(modMember.getName().equals(modName)) {
+			Member member = memList.get(i);
+			if(member.getName().equals(Name)) {
 				memList.set(i, modMember);
+				System.out.println();
+				System.out.println("[서비스 성공] : 출력 성공!");
+				System.out.println();
+				flag = true;
 				break;
 			}
+		}
+		if(!flag) {
+			System.out.println();
+			System.out.println("등록되지 않은 고객님입니다. 고객님의 성함을 정확히 입력해주세요.");
+			System.out.println();
+			System.out.println("[서비스 실패] : 조회 실패!");
 		}
 	}
 	// 고객 선물 확인
@@ -143,25 +159,32 @@ public class MemberFunction {
 		System.out.print("조회할 고객 : ");
 		String searchName = sc.next();
 		System.out.println();
+		boolean flag = false;
 		for(Member mem : memList) {
 			if(mem.getName().equals(searchName)) {
 				if(mem.getMoney() <= 10000000) {
-					System.out.println(searchName + "님의 2024년 새해 선물은 참치선물세트입니다.");
+					System.out.println(searchName + "님의 2024년 새해 선물은 참치 선물세트입니다.");
 				} else if(mem.getMoney() > 10000000 && mem.getMoney() <= 100000000) {
-					System.out.println(searchName + "님의 2024년 새해 선물은 한과선물세트입니다.");
-				} else if(mem.getMoney() > 100000000 && mem.getMoney() <= 500000000) {
-					System.out.println(searchName + "님의 2024년 새해 선물은 홍삼선물세트입니다.");
-				} else if(mem.getMoney() > 500000000) {
-					System.out.println(searchName + "님의 2024년 새해 선물은 1++ 한우선물세트입니다.");
+					System.out.println(searchName + "님의 2024년 새해 선물은 고급 한과 선물세트입니다.");
+				} else if(mem.getMoney() > 100000000 && mem.getMoney() <= 1000000000) {
+					System.out.println(searchName + "님의 2024년 새해 선물은 홍삼 선물세트입니다.");
+				} else if(mem.getMoney() > 1000000000) {
+					System.out.println(searchName + "님의 2024년 새해 선물은 1++ 한우 선물세트입니다.");
 				}
+				System.out.println();
+				System.out.println("[서비스 성공] : 조회 성공!");
+				System.out.println();
+				flag = true;
 			}
 		}
-		System.out.println();
-		System.out.println("[서비스 성공] : 조회 성공!");
-		System.out.println();
+		if(!flag) {
+			System.out.println("등록되지 않은 고객님입니다. 고객님의 성함을 정확히 입력해주세요.");
+			System.out.println();
+			System.out.println("[서비스 실패] : 조회 실패!");
+		}
 	}
 	// 등록 된 고객정보 삭제
-	public void DeleteInfo() {
+	public void romoveInfo() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("=====================================================================================");
 		System.out.println("                                    고객 정보 삭제                                   ");
@@ -169,21 +192,22 @@ public class MemberFunction {
 		System.out.print("삭제할 고객 : ");
 		String searchName = sc.next();
 		System.out.println();
+		boolean flag = false;
 		for(int i = 0; i < memList.size(); i++) {
 			Member mem = memList.get(i);
 			if(mem.getName().equals(searchName)) {
 				memList.remove(i);
 				System.out.println("[서비스 성공] : 삭제 성공!");
+				flag = true;
 				break;
 			} 
-			else {
-				System.out.println("등록되지 않은 고객님입니다. 고객님의 성함을 정확히 입력해주세요.");
-				System.out.println();
-				System.out.println("[서비스 실패] : 삭제 실패!");
-				break;
-			}
 		}
-		System.out.println();
+		if(!flag) {
+			System.out.println("등록되지 않은 고객님입니다. 고객님의 성함을 정확히 입력해주세요.");
+			System.out.println();
+			System.out.println("[서비스 실패] : 삭제 실패!");
+			System.out.println();
+		}
 	}
 	
 	public void ShowEnd() {
