@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Java 개념정리
 
 <section class="section">
