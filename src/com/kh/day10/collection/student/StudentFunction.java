@@ -62,7 +62,7 @@ public class StudentFunction {
 			int score1 = student.getSocre1();
 			int score2 = student.getScore2();
 			double avg = (double)(score1 + score2)/2;
-			System.out.println(); // 결과출력 학생 이름
+			System.out.println();
 			if(avg >= 60) {
 				if(score1 < 40) {
 					System.out.println("1차 시험 재시험 대상자입니다.");
