@@ -28,6 +28,8 @@ public class ChattingSever {
 			os = socket.getOutputStream();	// 한번만 생성되면 됨. 반복 필요 없음
 			
 			while(true) {
+				
+				
 				// 2. 데이터 받기
 				// 프로그램 기준 들어오니까 InputStream
 				byte [] bytes = new byte[1024];
