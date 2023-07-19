@@ -22,11 +22,11 @@ public class Music {
 	}
 	
 	// setter 메소드
-	public void setSigner() {
+	public void setSigner(String singer) {
 		this.singer = singer;
 	}
 	
-	public void setTitle() {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 	
